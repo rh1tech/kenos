@@ -25,3 +25,6 @@ site/appcast.json
 
 __pycache__/
 *.pyc
+
+# Editor / agent — never publish
+.cursor/
