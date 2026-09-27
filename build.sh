@@ -20,9 +20,9 @@
 #   ASC_ISSUER_ID        override issuer (default: file above)
 #   KENOS_DOWNLOAD_URL    https folder for appcast links (default kenos.rh1.tech/download)
 #
-# NOTES.md, next to this script, is what's new: newest release first, one
-# paragraph each. The first paragraph goes into the appcast, and from there
-# under the version line in Settings.
+# Optional local NOTES.md (gitignored) is what's new: newest release first,
+# one paragraph each. The first paragraph goes into the appcast, and from
+# there under the version line in Settings. Keep a private copy if you like.
 set -euo pipefail
 
 cd "$(dirname "$0")"
