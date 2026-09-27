@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kenos — a small WebKit browser for macOS</title>
+<meta name="description" content="Kenos is a small browser built on the WebKit already in macOS — without Safari’s chrome. Extensions when you want them. Ads blocked before they load.">
+<link rel="canonical" href="https://kenos.rh1.tech/">
+<link rel="alternate" hreflang="en" href="https://kenos.rh1.tech/">
+<link rel="alternate" hreflang="ru" href="https://kenos.rh1.tech/ru/">
+<link rel="alternate" hreflang="x-default" href="https://kenos.rh1.tech/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Kenos">
+<meta property="og:title" content="Kenos — a small WebKit browser for macOS">
+<meta property="og:description" content="Safari’s engine. Not Safari’s chrome.">
+<meta property="og:url" content="https://kenos.rh1.tech/">
+<meta property="og:image" content="https://kenos.rh1.tech/assets/img/og.png">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="ru_RU">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0e0f12">
+<meta name="color-scheme" content="dark">
+<link rel="icon" href="/assets/img/favicon.png" type="image/png" sizes="64x64">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<link rel="stylesheet" href="/assets/css/fonts.css">
+<link rel="stylesheet" href="/assets/css/site.css">
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/">
+      <img src="/assets/img/apple-touch-icon.png" alt="" width="26" height="26">
+      Kenos
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menu">
+      <svg class="ic-burger" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+      <svg class="ic-close" viewBox="0 0 24 24" aria-hidden="true"><path d="M5.6 4.2 12 10.6l6.4-6.4 1.4 1.4L13.4 12l6.4 6.4-1.4 1.4L12 13.4l-6.4 6.4-1.4-1.4L10.6 12 4.2 5.6z"/></svg>
+    </button>
+    <nav class="site-nav" id="site-nav" aria-label="Main">
+      <a href="/#what">Inside</a>
+      <a href="/support/">Support</a>
+      <a href="/privacy/">Privacy</a>
+      <a href="https://github.com/rh1tech/kenos">GitHub</a>
+      <a class="lang" href="/ru/" lang="ru" hreflang="ru">Русский</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero" aria-labelledby="hero-heading">
+    <div class="wrap">
+      <p class="brand-lockup reveal" aria-hidden="true"><span>Kenos</span></p>
+      <div class="hero-copy reveal d1">
+        <h1 id="hero-heading">Safari’s engine.<br>Not Safari’s chrome.</h1>
+        <p class="lead">A small browser for macOS: the WebKit already on your Mac, tabs and an address field, and almost nothing else in the way.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="/download/Kenos.dmg">Download</a>
+          <a class="btn" href="#what">Look inside</a>
+        </div>
+      </div>
+
+      <figure class="shots reveal d2" data-shot="dark">
+        <div class="shot-switch" role="group" aria-label="Appearance">
+          <button type="button" data-shot="light" aria-pressed="false">Light</button>
+          <button type="button" data-shot="dark" aria-pressed="true">Dark</button>
+        </div>
+        <div class="shot-stage">
+          <picture class="shot" data-shot="light">
+            <source type="image/webp" srcset="/assets/img/shots/browser-light-800.webp 800w, /assets/img/shots/browser-light-1600.webp 1600w" sizes="(max-width: 720px) 92vw, 880px">
+            <img src="/assets/img/shots/browser-light-1600.webp" width="1600" height="957" alt="Kenos in light appearance, open on the WebKit Wikipedia article." decoding="async">
+          </picture>
+          <picture class="shot is-active" data-shot="dark">
+            <source type="image/webp" srcset="/assets/img/shots/browser-dark-800.webp 800w, /assets/img/shots/browser-dark-1600.webp 1600w" sizes="(max-width: 720px) 92vw, 880px">
+            <img src="/assets/img/shots/browser-dark-1600.webp" width="1600" height="957" alt="Kenos in dark appearance, open on the WebKit Wikipedia article." decoding="async" fetchpriority="high">
+          </picture>
+        </div>
+      </figure>
+    </div>
+  </section>
+
+  <section class="band" id="what" aria-labelledby="what-heading">
+    <div class="wrap">
+      <p class="marker reveal">Inside the glovebox</p>
+      <h2 id="what-heading" class="reveal">What you actually press.</h2>
+      <div class="rail">
+        <div class="rail-item reveal">
+          <div class="rail-key">Shield</div>
+          <div>
+            <h3>Ads stop before they load</h3>
+            <p>EasyList, EasyPrivacy and uBlock’s own filters as WebKit rules. Pause a host when a page breaks; update the lists when you want.</p>
+          </div>
+          <div class="rail-meta">Settings › Shield</div>
+        </div>
+        <div class="rail-item reveal d1">
+          <div class="rail-key">Passwords</div>
+          <div>
+            <h3>Keychain only</h3>
+            <p>Offer to save, autofill, Touch ID to reveal. Nothing is uploaded to us — the items live in the macOS keychain under Kenos.</p>
+          </div>
+          <div class="rail-meta">⇧⌘L</div>
+        </div>
+        <div class="rail-item reveal d1">
+          <div class="rail-key">Reading</div>
+          <div>
+            <h3>Strip the page, keep the words</h3>
+            <p>Reading mode, hide any element, float the video when you leave the tab. The shortcuts stay out of the chrome until you need them.</p>
+          </div>
+          <div class="rail-meta">⇧⌘R · ⇧⌘H · ⇧⌘P</div>
+        </div>
+        <div class="rail-item reveal d2">
+          <div class="rail-key">Tabs</div>
+          <div>
+            <h3>Top, bottom, or down the side</h3>
+            <p>A strip or a column you can tuck away. Spaces if you want separate sets of tabs. Sleep idle ones without losing your place.</p>
+          </div>
+          <div class="rail-meta">⇧⌘S</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band band-tight" aria-labelledby="privacy-heading">
+    <div class="wrap">
+      <p class="marker reveal">On this Mac</p>
+      <h2 id="privacy-heading" class="reveal">Browsing stays here.</h2>
+      <p class="reveal measure">No Kenos account. No analytics package of ours. History and bookmarks sit in Application Support; passwords in the keychain. The only calls Kenos makes for itself are update checks and optional filter-list refreshes — written down in the privacy policy.</p>
+      <div class="hero-actions reveal">
+        <a class="btn" href="/privacy/">Privacy</a>
+        <a class="btn" href="/support/">Support</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      <p>Kenos — a small WebKit browser for macOS.</p>
+      <p>© 2026 Mikhail A. Matveev. All rights reserved.</p>
+      <p>Published by Elizaveta Fragner, Berlin. Not affiliated with Apple Inc.</p>
+    </div>
+    <nav class="footer-links" aria-label="Footer">
+      <a href="/">Home</a>
+      <a href="/support/">Support</a>
+      <a href="/privacy/">Privacy</a>
+      <a href="https://github.com/rh1tech/kenos">GitHub</a>
+      <a href="mailto:support@rh1.tech">support@rh1.tech</a>
+      <a href="/impressum/">Impressum</a>
+      <a href="/ru/" lang="ru" hreflang="ru">Русский</a>
+    </nav>
+  </div>
+</footer>
+<script src="/assets/js/site.js" defer></script>
+</body>
+</html>

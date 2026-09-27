@@ -1,0 +1,18 @@
+{
+  "source": "gorhill/uBlock default lists + hosts",
+  "lists": {
+    "easylist": 80221,
+    "easyprivacy": 56011,
+    "ublock-filters": 11651,
+    "ublock-badware": 3962,
+    "ublock-privacy": 1302,
+    "ublock-quick-fixes": 160,
+    "ublock-unbreak": 1984,
+    "hosts": 2630
+  },
+  "hosts": 2630,
+  "blocks": 44778,
+  "cosmetics": 155,
+  "exceptions": 67,
+  "total": 45000
+}

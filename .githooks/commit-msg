@@ -1,0 +1,34 @@
+#!/bin/sh
+# Reject commit messages that advertise AI tooling (Cursor, Copilot, ChatGPT…).
+# Installed via: git config core.hooksPath .githooks
+set -eu
+msg_file="$1"
+# Strip comments Git leaves in the message file before scanning.
+body=$(grep -v '^#' "$msg_file" || true)
+
+# Case-insensitive scan for common AI / assistant trailers and attributions.
+# Keep the list tight: only lines that mark a commit as machine-authored.
+if printf '%s\n' "$body" | grep -Ei \
+  -e '^[[:space:]]*co-authored-by:.*\b(cursor|copilot|chatgpt|openai|anthropic|claude|gemini|composer|gpt|ai)\b' \
+  -e '^[[:space:]]*co-authored-by:[[:space:]]*cursor\b' \
+  -e '^[[:space:]]*(generated|authored|written|committed)[- ]by:.*\b(cursor|copilot|chatgpt|openai|anthropic|claude|gemini|composer|gpt)\b' \
+  -e '^[[:space:]]*made[- ]with:[[:space:]]*(cursor|copilot|chatgpt|claude)' \
+  -e '^[[:space:]]*assisted[- ]by:.*\b(cursor|copilot|chatgpt|claude|gemini)\b' \
+  -e '(cursor|copilot)[[:space:]]*(agent|bot|ai)[[:space:]]*<' \
+  >/dev/null
+then
+  echo "commit-msg: refused — AI attribution trailer in the commit message." >&2
+  echo "Remove Co-authored-by / Generated-by / Made-with lines that name AI tools." >&2
+  exit 1
+fi
+
+# Also catch the bare Cursor email form people paste by accident.
+if printf '%s\n' "$body" | grep -Ei \
+  -e '^[[:space:]]*co-authored-by:.*<(cursor|copilot|chatgpt)@' \
+  >/dev/null
+then
+  echo "commit-msg: refused — AI Co-authored-by address." >&2
+  exit 1
+fi
+
+exit 0

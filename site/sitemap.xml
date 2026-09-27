@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://kenos.rh1.tech/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kenos.rh1.tech/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kenos.rh1.tech/ru/"/>
+    <lastmod>2026-09-27</lastmod>
+  </url>
+  <url>
+    <loc>https://kenos.rh1.tech/support/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kenos.rh1.tech/support/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kenos.rh1.tech/ru/support/"/>
+    <lastmod>2026-09-27</lastmod>
+  </url>
+  <url>
+    <loc>https://kenos.rh1.tech/privacy/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kenos.rh1.tech/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://kenos.rh1.tech/ru/privacy/"/>
+    <lastmod>2026-09-27</lastmod>
+  </url>
+  <url>
+    <loc>https://kenos.rh1.tech/ru/</loc>
+    <lastmod>2026-09-27</lastmod>
+  </url>
+  <url>
+    <loc>https://kenos.rh1.tech/ru/support/</loc>
+    <lastmod>2026-09-27</lastmod>
+  </url>
+  <url>
+    <loc>https://kenos.rh1.tech/ru/privacy/</loc>
+    <lastmod>2026-09-27</lastmod>
+  </url>
+</urlset>

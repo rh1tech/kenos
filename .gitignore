@@ -1,0 +1,24 @@
+# Build output — build.sh regenerates all of this.
+.build/
+build/
+.swiftpm/
+DerivedData/
+*.xcodeproj
+*.xcuserstate
+.DS_Store
+
+# Signing material — never commit.
+*.provisionprofile
+*.p12
+*.mobileprovision
+
+# Site artefacts generated or published separately.
+site/download/*.dmg
+site/download/*.zip
+site/download/*.sha256
+site/appcast.json
+
+# Local / editor noise
+*.swp
+*~
+.idea/

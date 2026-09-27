@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Конфиденциальность — Kenos</title>
+<meta name="description" content="Как Kenos обрабатывает данные просмотра, пароли, обновления и этот сайт. Без аккаунтов и собственной аналитики.">
+<link rel="canonical" href="https://kenos.rh1.tech/ru/privacy/">
+<link rel="alternate" hreflang="en" href="https://kenos.rh1.tech/privacy/">
+<link rel="alternate" hreflang="ru" href="https://kenos.rh1.tech/ru/privacy/">
+<link rel="alternate" hreflang="x-default" href="https://kenos.rh1.tech/privacy/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Kenos">
+<meta property="og:title" content="Конфиденциальность — Kenos">
+<meta property="og:description" content="Как Kenos обрабатывает данные просмотра, пароли, обновления и этот сайт. Без аккаунтов и собственной аналитики.">
+<meta property="og:url" content="https://kenos.rh1.tech/ru/privacy/">
+<meta property="og:image" content="https://kenos.rh1.tech/assets/img/og.png">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:locale:alternate" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0e0f12">
+<meta name="color-scheme" content="dark">
+<link rel="icon" href="/assets/img/favicon.png" type="image/png" sizes="64x64">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<link rel="stylesheet" href="/assets/css/fonts.css">
+<link rel="stylesheet" href="/assets/css/site.css">
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+<a class="skip" href="#main">К содержанию</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/ru/">
+      <img src="/assets/img/apple-touch-icon.png" alt="" width="26" height="26">
+      Kenos
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Меню">
+      <svg class="ic-burger" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+      <svg class="ic-close" viewBox="0 0 24 24" aria-hidden="true"><path d="M5.6 4.2 12 10.6l6.4-6.4 1.4 1.4L13.4 12l6.4 6.4-1.4 1.4L12 13.4l-6.4 6.4-1.4-1.4L10.6 12 4.2 5.6z"/></svg>
+    </button>
+    <nav class="site-nav" id="site-nav" aria-label="Основная навигация">
+      <a href="/ru/#what">Возможности</a>
+      <a href="/ru/support/">Поддержка</a>
+      <a href="/ru/privacy/" aria-current="page">Конфиденциальность</a>
+      <a href="https://github.com/rh1tech/kenos">GitHub</a>
+      <a class="lang" href="/privacy/" lang="en" hreflang="en">English</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<section class="doc">
+  <div class="wrap narrow">
+    <h1>Политика конфиденциальности</h1>
+    <p class="updated">Обновлено 27 сентября 2026</p>
+
+    <div class="callout">
+      <p><strong>У Kenos нет аккаунтов и собственной аналитики.</strong> Данные просмотра остаются на вашем Mac. Пароли — в связке ключей macOS. Сеть нужна для сайтов, которые вы открываете, для обновления списков фильтров (по желанию) и для проверки обновлений приложения на этом сайте.</p>
+    </div>
+
+    <h2>Кто мы</h2>
+    <p>Приложение разработал и защищает авторским правом Mikhail A. Matveev («Разработчик»). Издатель — Elizaveta Fragner, Halskestr. 34 A, 12167 Berlin, Germany («Издатель»). Вопросы по приложению и сайту: <a href="mailto:support@rh1.tech">support@rh1.tech</a>. См. также <a href="/impressum/">Impressum</a> и <a href="/ru/support/">Поддержку</a>.</p>
+
+    <h2>Что остаётся на вашем Mac</h2>
+    <ul>
+      <li><strong>История, закладки, сессия, пространства, скрытые элементы и настройки</strong> — в <code>~/Library/Application Support/Kenos/</code>.</li>
+      <li><strong>Пароли и связанные записи связки ключей</strong> — в связке ключей macOS под Kenos. Нам они не отправляются.</li>
+      <li><strong>Cookie и данные сайтов</strong> — в хранилище WebKit приложения (и отдельно по пространствам, если они включены).</li>
+      <li><strong>Загрузки</strong> — в выбранной вами папке (по умолчанию «Загрузки»).</li>
+      <li><strong>Расширения</strong>, которые вы установили, — в Application Support.</li>
+    </ul>
+    <p>Удаление приложения убирает его данные и связанные записи связки ключей; скачанные файлы остаются там, куда вы их сохранили.</p>
+
+    <h2>Использование сети</h2>
+    <p>Как браузер Kenos соединяется с сайтами, которые вы открываете. Отдельно сам Kenos может:</p>
+    <ul>
+      <li>запрашивать <code>https://kenos.rh1.tech/appcast.json</code> (примерно раз в день или по кнопке «Проверить») и скачивать архив обновления с этого же сайта;</li>
+      <li>загружать публичные списки фильтров (EasyList, EasyPrivacy, фильтры uBlock Origin и связанные источники) при обновлении защиты — эти запросы идут на серверы издателей списков, а не в аналитику Kenos.</li>
+    </ul>
+    <p>Нет отчётов о сбоях «домой», нет рекламных SDK и нет системы аккаунтов.</p>
+
+    <h2>Камера, микрофон и геолокация</h2>
+    <p>Сайты могут запрашивать доступ. Kenos спрашивает вас для каждого сайта и запоминает ответ, пока вы не сбросите его в Настройки › Защита. macOS при этом может показать свои диалоги разрешений.</p>
+
+    <h2>Расширения</h2>
+    <p>Установленные расширения запрашивают свои права и могут передавать данные по <em>своим</em> правилам. Смотрите каждое расширение перед включением. В приватных вкладках расширения по умолчанию выключены.</p>
+
+    <h2>Этот сайт</h2>
+    <p>Страницы статические. Нет cookie, скриптов аналитики и сторонних запросов за шрифтами — шрифты отдаются с этого домена. Хостинг и Cloudflare могут вести обычные журналы доступа.</p>
+
+    <h2>Дети</h2>
+    <p>Kenos не рассчитан специально на детей и не собирает намеренно их данные через наши сервисы.</p>
+
+    <h2>Изменения</h2>
+    <p>Если в будущей версии изменится то, что уходит с Mac, эту страницу обновят заранее — с новой датой выше.</p>
+
+    <h2>Контакт</h2>
+    <p><a href="mailto:support@rh1.tech">support@rh1.tech</a></p>
+  </div>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      <p>Kenos — небольшой браузер на WebKit для macOS.</p>
+      <p>© 2026 Mikhail A. Matveev. Все права защищены.</p>
+      <p>Издатель — Elizaveta Fragner, Берлин. Не связан с Apple Inc.</p>
+    </div>
+    <nav class="footer-links" aria-label="Ссылки в подвале">
+      <a href="/ru/">Главная</a>
+      <a href="/ru/support/">Поддержка</a>
+      <a href="/ru/privacy/">Конфиденциальность</a>
+      <a href="https://github.com/rh1tech/kenos">GitHub</a>
+      <a href="mailto:support@rh1.tech">support@rh1.tech</a>
+      <a href="/impressum/">Impressum</a>
+      <a href="/" lang="en" hreflang="en">English</a>
+    </nav>
+  </div>
+</footer>
+<script src="/assets/js/site.js" defer></script>
+</body>
+</html>

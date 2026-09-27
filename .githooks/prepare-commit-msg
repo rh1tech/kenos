@@ -1,0 +1,22 @@
+#!/bin/sh
+# Strip AI attribution trailers Cursor / Copilot may inject into the message
+# template before the editor or -m message is finalised.
+set -eu
+msg_file="$1"
+# Only touch the message file for plain commits (not merge/squash templates we
+# don't own). $2 is the source: message, template, merge, squash, commit.
+case "${2:-}" in
+  merge|squash) exit 0 ;;
+esac
+
+tmp=$(mktemp)
+# Drop known AI trailers; leave everything else alone.
+grep -Eiv \
+  -e '^[[:space:]]*co-authored-by:.*\b(cursor|copilot|chatgpt|openai|anthropic|claude|gemini|composer)\b' \
+  -e '^[[:space:]]*co-authored-by:[[:space:]]*cursor\b' \
+  -e '^[[:space:]]*(generated|authored|written|committed)[- ]by:.*\b(cursor|copilot|chatgpt|openai|anthropic|claude|gemini|composer|gpt)\b' \
+  -e '^[[:space:]]*made[- ]with:[[:space:]]*(cursor|copilot|chatgpt|claude)' \
+  -e '^[[:space:]]*assisted[- ]by:.*\b(cursor|copilot|chatgpt|claude|gemini)\b' \
+  "$msg_file" > "$tmp" || true
+mv "$tmp" "$msg_file"
+exit 0
