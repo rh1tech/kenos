@@ -22,3 +22,6 @@ site/appcast.json
 *.swp
 *~
 .idea/
+
+__pycache__/
+*.pyc
