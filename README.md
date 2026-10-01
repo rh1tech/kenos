@@ -4,7 +4,7 @@ A small, fast WebKit browser for macOS 26+, with nothing in the way.
 
 Tabs, an address field, back / forward / reload — and the page. Liquid Glass on the chrome. Reading mode, hide-anything, a built-in ad blocker, floating video, passwords in the macOS keychain, Chrome extensions on WebKit, and quiet updates.
 
-**Requires macOS 26 or later.**
+**Requires macOS 26+.**
 
 Site: [kenos.rh1.tech](https://kenos.rh1.tech) · Source: [github.com/rh1tech/kenos](https://github.com/rh1tech/kenos) · Support: [support@rh1.tech](mailto:support@rh1.tech)
 
